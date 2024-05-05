@@ -9,8 +9,9 @@
 
 :root {
 
-    --kinetic_motif_color: aqua;
+    --kinetic_motif_color: rgb(96, 96, 107) /*rgb(97, 97, 163)*/;
     --bg_color: rgb(40, 39, 37);
+    --static_motif: #fa7921;
 }
 
 
@@ -24,7 +25,7 @@ main {
     justify-content: center;
     min-height: 10vh;
     /*background-color:rgb(253, 202, 136);*/
-    background-color: #fa7921; 
+    background-color: var(--static_motif); 
 
     
 }
@@ -37,7 +38,7 @@ main {
     font-size: 2vh;
     align-content: center;
     /*background-color:rgb(253, 202, 136);*/
-    background-color: #fa7921; 
+    background-color: var(--static_motif); 
 
     display: flex;
     flex-flow: row, wrap;
@@ -48,7 +49,7 @@ main {
 
 h1 {
     /*background-color:rgb(253, 202, 136);*/
-    background-color: #fa7921; 
+    background-color: var(--static_motif); 
     align-self: center;
     align-content: baseline;
     
@@ -80,7 +81,7 @@ h1 {
     border-style: solid;
     border-color: black;*/
     /*background-color:rgb(253, 202, 136);*/
-    background-color: #fa7921; 
+    background-color: var(--static_motif); 
 
     align-self: center;
 
@@ -94,7 +95,7 @@ h1 {
     justify-content: center;
     column-gap: 5vh;
     /*background-color:rgb(253, 202, 136);*/
-    background-color: #fa7921; 
+    background-color: var(--static_motif); 
 
  
     
@@ -103,18 +104,19 @@ h1 {
 
 li {
     /*background-color:rgb(253, 202, 136);*/
-    background-color: #fa7921; 
+    background-color: var(--static_motif); 
 
 
 }
 
 .navitem {
 
-    background-color: #fa7921;
+    background-color: var(--static_motif);
     /*border-radius: 1px;
     border-style: solid;
     border-color: black;*/
     font-weight: bolder;
+    color: black;
 }
 
 .navitem:hover {
@@ -162,6 +164,7 @@ a {
     border-color: black;*/
     /*border: 1vh solid rgb(40, 39, 37);*/
     border: 1vh solid hidden;
+    color: var(--kinetic_motif_color);
    /* transition: background-color 0.2s;
     transition-timing-function: linear;*/
     border: 0.1vh solid #6b6a69 ;
@@ -172,6 +175,7 @@ a {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    
     
 
 }
@@ -220,10 +224,10 @@ a {
 }
 
 @keyframes slide {
-    from {background-color: fa7921; }
+    from {background-color: rgb(33, 33, 31) }
     to {/*background-color: var(--kinetic_motif_color);*/ 
         border-color: #fa7921;
-        color: var(--kinetic_motif_color); 
+        color: #fa7921; 
         background-color: rgb(33, 33, 31) ;}
 }
 
