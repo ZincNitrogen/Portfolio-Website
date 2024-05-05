@@ -1,0 +1,217 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 39, 37);
+
+}
+
+
+main {
+
+    /*border-radius: 10px;
+    border-style: solid;
+    border-color: black;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 10vh;
+    /*background-color:rgb(253, 202, 136);*/
+    background-color: #fa7921; 
+
+    
+}
+
+#intro_text {
+    flex-basis: 70%;
+    /*border-radius: 10px;
+    border-style: solid;
+    border-color: black;*/
+    font-size: 2vh;
+    align-content: center;
+    /*background-color:rgb(253, 202, 136);*/
+    background-color: #fa7921; 
+
+    display: flex;
+    flex-flow: row, wrap;
+    
+
+
+}
+
+h1 {
+    /*background-color:rgb(253, 202, 136);*/
+    background-color: #fa7921; 
+    align-self: center;
+    align-content: baseline;
+    
+
+
+    
+
+}
+
+#developer {
+    margin-left: 1vh;
+    align-self: center;
+    align-content: baseline;
+
+    animation-name: developer;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    
+}
+
+#translation {
+    animation-name: trans;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#navbar {
+    flex-basis: 20%;
+    /*border-radius: 10px;
+    border-style: solid;
+    border-color: black;*/
+    /*background-color:rgb(253, 202, 136);*/
+    background-color: #fa7921; 
+
+    align-self: center;
+
+    
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 5vh;
+    /*background-color:rgb(253, 202, 136);*/
+    background-color: #fa7921; 
+
+ 
+    
+
+}
+
+li {
+    /*background-color:rgb(253, 202, 136);*/
+    background-color: #fa7921; 
+
+
+}
+
+.navitem {
+
+    background-color: #fa7921;
+    /*border-radius: 1px;
+    border-style: solid;
+    border-color: black;*/
+    font-weight: bolder;
+}
+
+.navitem:hover {
+    color:aqua;
+    font-weight: bolder;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+   /* border-radius: 10px;
+    border-style: solid;
+    border-color: black;*/
+    column-gap: 5vh;
+
+}
+
+article {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5vh;
+    margin-top: 20vh;
+    row-gap: 5vh;
+        
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+.panels {
+    background-color: #fa7921; 
+    padding: 5vh 15vh 5vh 15vh;
+    /*border-radius: 10px;
+    border-style: solid;
+    border-color: black;*/
+    /*border: 1vh solid rgb(40, 39, 37);*/
+    border: 1vh solid hidden;
+   /* transition: background-color 0.2s;
+    transition-timing-function: linear;*/
+    
+
+}
+
+.panels:hover {
+
+
+   /* box-shadow: 0vh 0.2vh 5vh -1vh rgb(0, 166, 255);*/
+   /*background-color: aqua; for transition*/
+   animation-name: slide;
+   animation-duration: 0.1s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+
+
+   
+}
+
+@keyframes slide {
+    from {background-color: fa7921; }
+    to {background-color: aqua;}
+}
+
+@keyframes developer {
+    from {color: black;}
+    to {color: aqua;}
+
+    
+}
+
+@keyframes trans {
+    from {background-color: #fa7921;}
+    to {background-color: none; transform: translate( 200px 100px);}
+}
+
+
+
+
+/*have "developer" cycle thru the other color and black. That other color will be the same motif for kinetic energy throughout the site 
+(on button press, on hover, etc)
+
+possible kinetic motif colors (hex)
+
+
+9649cb
+AFBBF2
+19647E
+
+
+
+*/
