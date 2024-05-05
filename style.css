@@ -7,6 +7,12 @@
 
 }
 
+:root {
+
+    --kinetic_motif_color: aqua;
+    
+}
+
 
 main {
 
@@ -119,7 +125,7 @@ li {
 }
 
 .navitem:hover {
-    color:aqua;
+    color: var(--kinetic_motif_color);
     font-weight: bolder;
 }
 
@@ -184,12 +190,12 @@ a {
 
 @keyframes slide {
     from {background-color: fa7921; }
-    to {background-color: aqua;}
+    to {background-color: var(--kinetic_motif_color);}
 }
 
 @keyframes developer {
     from {color: black;}
-    to {color: aqua;}
+    to {color: var(--kinetic_motif_color);}
 
     
 }
