@@ -65,21 +65,14 @@ h1 {
 
     animation-name: developer;
     animation-duration: 3s;
-    animation-delay: 0s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
     animation-fill-mode: forwards;
+    animation-direction: alternate;
     
 }
 
-#translation {
-    animation-name: trans;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
+
 
 #navbar {
     flex-basis: 20%;
@@ -194,11 +187,36 @@ a {
    animation-duration: 0.1s;
    animation-timing-function: linear;
    animation-fill-mode: forwards;
+   animation-iteration-count: 1; /*remove this for that flickering effect!*/
    box-shadow: 0vh 2vh 4vh -3vh #6b6a69;
 
 
 
    
+}
+
+#statusbarcontainer {
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: flex-start;
+    min-height: 3vh;
+    background-color: var(--kinetic_motif_color); 
+
+
+}
+
+#statusbar {
+    background-color: var(--kinetic_motif_color); 
+    color: whitesmoke;
+    align-content: center;
+    animation-name: statusbarupdate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+    position: relative;
+    
 }
 
 @keyframes slide {
@@ -227,6 +245,13 @@ a {
     
 }
 
+@keyframes statusbarupdate {
+    0%   {left: 0vh;}
+    
+    100% {left:192vh; }
+}
+
+    
 
 /*have "developer" cycle thru the other color and black. That other color will be the same motif for kinetic energy throughout the site 
 (on button press, on hover, etc)
