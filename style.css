@@ -10,7 +10,7 @@
 :root {
 
     --kinetic_motif_color: aqua;
-    
+    --bg_color: rgb(40, 39, 37);
 }
 
 
@@ -161,7 +161,8 @@ a {
 
 
 .panels {
-    background-color: #fa7921; 
+    /*background-color: #fa7921; */
+    background-color: none;
     padding: 5vh 15vh 5vh 15vh;
     /*border-radius: 10px;
     border-style: solid;
@@ -170,9 +171,19 @@ a {
     border: 1vh solid hidden;
    /* transition: background-color 0.2s;
     transition-timing-function: linear;*/
+    border: 0.1vh solid #6b6a69 ;
+    border-radius: 1.5vh;
+
+    animation-name: panelatrest;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     
 
 }
+
+
 
 .panels:hover {
 
@@ -183,6 +194,8 @@ a {
    animation-duration: 0.1s;
    animation-timing-function: linear;
    animation-fill-mode: forwards;
+   box-shadow: 0vh 2vh 4vh -3vh #6b6a69;
+
 
 
    
@@ -190,7 +203,10 @@ a {
 
 @keyframes slide {
     from {background-color: fa7921; }
-    to {background-color: var(--kinetic_motif_color);}
+    to {/*background-color: var(--kinetic_motif_color);*/ 
+        border-color: #fa7921;
+        color: var(--kinetic_motif_color); 
+        background-color: rgb(33, 33, 31) ;}
 }
 
 @keyframes developer {
@@ -205,7 +221,11 @@ a {
     to {background-color: none; transform: translate( 200px 100px);}
 }
 
-
+@keyframes panelatrest {
+    from {background-color:var(--bg_color);}
+    to {background-color: rgb(33, 33, 31) ;}
+    
+}
 
 
 /*have "developer" cycle thru the other color and black. That other color will be the same motif for kinetic energy throughout the site 
