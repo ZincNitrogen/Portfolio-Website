@@ -1,17 +1,50 @@
+
+:root {
+
+
+
+
+
+    /*Greys and Shades*/
+    --primary_origin: rgb(40, 39, 37);
+    
+    
+    --grey_darker: #212f3c;
+    --grey_dark: #2e4053;
+    --grey_origin: #34495e;
+    --grey_light: rgb(96, 96, 107); /*--kinetic_motif_color */
+    --grey_lighter: #ebedef;
+    
+    
+    
+    
+
+
+
+    /*Primary Color and Shades*/
+    --static_motif_darker: #b7950b;
+    --static_motif_dark:#d4ac0d;
+    --static_motif: #f1c40f; /*#fa7921;*/
+    --static_motif_light:#f7dc6f;
+    --static_motif_lighter:#f9e79f; 
+
+     
+    
+
+    /*Accent Colors and Shades*/
+        --box_shadow_color: #6b6a69;
+
+   
+}
+
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(40, 39, 37);
+    background-color: var(--grey_lighter);
 
-}
-
-:root {
-
-    --kinetic_motif_color: rgb(96, 96, 107) /*rgb(97, 97, 163)*/;
-    --bg_color: rgb(40, 39, 37);
-    --static_motif: #fa7921;
 }
 
 
@@ -25,7 +58,7 @@ main {
     justify-content: center;
     min-height: 10vh;
     /*background-color:rgb(253, 202, 136);*/
-    background-color: var(--static_motif); 
+    background-color: var(--grey_lighter); 
 
     
 }
@@ -38,7 +71,7 @@ main {
     font-size: 2vh;
     align-content: center;
     /*background-color:rgb(253, 202, 136);*/
-    background-color: var(--static_motif); 
+    background-color: var(--grey_lighter); 
 
     display: flex;
     flex-flow: row, wrap;
@@ -49,7 +82,7 @@ main {
 
 h1 {
     /*background-color:rgb(253, 202, 136);*/
-    background-color: var(--static_motif); 
+    background-color: var(--grey_lighter); 
     align-self: center;
     align-content: baseline;
     
@@ -95,7 +128,7 @@ h1 {
     justify-content: center;
     column-gap: 5vh;
     /*background-color:rgb(253, 202, 136);*/
-    background-color: var(--static_motif); 
+    background-color: var(--grey_lighter); 
 
  
     
@@ -104,14 +137,14 @@ h1 {
 
 li {
     /*background-color:rgb(253, 202, 136);*/
-    background-color: var(--static_motif); 
+    background-color: var(--grey_lighter); 
 
 
 }
 
 .navitem {
 
-    background-color: var(--static_motif);
+    background-color: var(--grey_lighter);
     /*border-radius: 1px;
     border-style: solid;
     border-color: black;*/
@@ -120,7 +153,7 @@ li {
 }
 
 .navitem:hover {
-    color: var(--kinetic_motif_color);
+    color: var(--static_motif_darker);
     font-weight: bolder;
 }
 
@@ -133,7 +166,22 @@ section {
     border-color: black;*/
     column-gap: 5vh;
 
+    /*animation-name: paneljump;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+
+    animation-name: panelswing;
+    animation-duration: 2.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
 }
+
+
 
 article {
     display: flex;
@@ -144,10 +192,25 @@ article {
     margin-bottom: 5vh;
     margin-top: 20vh;
     row-gap: 5vh;
+
+    animation-name: paneljump;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+   
         
 }
 
-
+.panels_top {
+    margin-top: 0vh;
+    animation-name: toppanelsjump;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 
 a {
@@ -157,25 +220,38 @@ a {
 
 .panels {
     /*background-color: #fa7921; */
-    background-color: none;
+    background-color:var(--grey_lighter);
     padding: 5vh 15vh 5vh 15vh;
     /*border-radius: 10px;
     border-style: solid;
     border-color: black;*/
     /*border: 1vh solid rgb(40, 39, 37);*/
     border: 1vh solid hidden;
-    color: var(--kinetic_motif_color);
+    color: var(--grey_darker);
    /* transition: background-color 0.2s;
     transition-timing-function: linear;*/
-    border: 0.1vh solid #6b6a69 ;
+    border: 0.1vh solid var(--box_shadow_color) ;
     border-radius: 1.5vh;
+    box-shadow: 0vh 2vh 6vh -3vh var(--grey_dark);
 
-    animation-name: panelatrest;
-    animation-duration: 0.5s;
+
+    /*animation-name: panelatrest;
+    animation-duration: 0.1s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate;*/
+
+    /*animation-name: paneljump;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+
+
+
     
+
+   
     
 
 }
@@ -187,24 +263,34 @@ a {
 
    /* box-shadow: 0vh 0.2vh 5vh -1vh rgb(0, 166, 255);*/
    /*background-color: aqua; for transition*/
-   animation-name: slide;
+   /*animation-name: slide;
    animation-duration: 0.1s;
    animation-timing-function: linear;
    animation-fill-mode: forwards;
-   animation-iteration-count: 1; /*remove this for that flickering effect!*/
-   box-shadow: 0vh 2vh 4vh -3vh #6b6a69;
+   animation-iteration-count: 1; remove this for that flickering effect!
+   */
+
+    /*animation-name: card_lift;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;*/
+    box-shadow: 0vh 4vh 6vh -3vh var(--grey_dark);
+    
+
 
 
 
    
 }
 
+
 #statusbarcontainer {
     display: flex;
     flex-flow: row, wrap;
     justify-content: flex-start;
     min-height: 3vh;
-    background-color: var(--kinetic_motif_color); 
+    background-color: var(--grey_light); 
 
 
 }
@@ -314,26 +400,32 @@ option {
 @keyframes slide {
     from {background-color: rgb(33, 33, 31) }
     to {/*background-color: var(--kinetic_motif_color);*/ 
-        border-color: #fa7921;
-        color: #fa7921; 
+        border-color: var(--static_motif);
+        color: var(--static_motif); 
         background-color: rgb(33, 33, 31) ;}
+}
+
+@keyframes card_life {
+
+    from {box-shadow: none;}
+    to {box-shadow: 5vh 2vh 4vh -3vh var(--grey_dark);}
 }
 
 @keyframes developer {
     from {color: black;}
-    to {color: var(--kinetic_motif_color);}
+    to {color: var(--static_motif_darker);}
 
     
 }
 
 @keyframes trans {
-    from {background-color: #fa7921;}
+    from {background-color: var(--static_motif);}
     to {background-color: none; transform: translate( 200px 100px);}
 }
 
 @keyframes panelatrest {
-    from {background-color:var(--bg_color);}
-    to {background-color: rgb(33, 33, 31) ;}
+    from {box-shadow: none;}
+    to {box-shadow: 0vh 2vh 4vh -3vh var(--grey_dark);}
     
 }
 
@@ -343,6 +435,22 @@ option {
     100% {left:192vh; }
 }
 
+@keyframes paneljump {
+
+    from {row-gap:5vh; column-gap:5vh;}
+    to {row-gap:5.5vh;column-gap:5.5vh;}
+}
+
+@keyframes panelswing {
+
+    from {column-gap:5vh;}
+    to {column-gap:6vh;}
+}
+@keyframes toppanelsjump {
+
+    from {margin-top: 0vh;}
+    to {margin-top: 5vh;}
+}
 
     
 
