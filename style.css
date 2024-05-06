@@ -223,6 +223,94 @@ a {
     
 }
 
+#contact-section {
+    color: var(--static_motif);
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    margin-top: 4vh;
+
+
+}
+
+fieldset {
+    border: 0.2vh solid var(--static_motif);
+
+}
+
+form {
+
+    margin: 2vh 2vh 2vh 2vh;
+}
+
+.user-text {
+    color: black;
+    background-color: lightslategray;
+    padding: 0.5vh;
+    outline: none;
+    width: 50vh;
+
+    font-size: large;
+}
+
+.user-text:focus {
+    border: 0.5vh solid var(--static_motif);
+
+}
+
+#text-box {
+    padding-bottom: 50vh;
+    outline: none;
+
+}
+
+#text-box:focus {
+    border: 0.5vh solid var(--static_motif);
+
+}
+
+#flex-form {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 0.5vh;
+}
+
+#message-type {
+    color: black;
+    background-color: lightslategray;
+    outline: none;
+    
+
+    
+}
+
+#email_input {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+option {
+    background-color: whitesmoke;
+}
+
+#submit-button {
+    align-self: flex-end;
+    background-color: lightslategray;
+    margin-top: 2vh;
+    width: 6vh;
+    transition: width 0.2s;
+    transition-timing-function: ease;
+
+}
+
+#submit-button:hover {
+    width: 50vh;
+}
+
+
+
 @keyframes slide {
     from {background-color: rgb(33, 33, 31) }
     to {/*background-color: var(--kinetic_motif_color);*/ 
@@ -254,6 +342,7 @@ a {
     
     100% {left:192vh; }
 }
+
 
     
 
