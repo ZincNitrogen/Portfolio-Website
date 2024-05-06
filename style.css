@@ -198,6 +198,7 @@ article {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-delay: -2s;
 
    
         
@@ -210,6 +211,7 @@ article {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-delay: -2s;
 }
 
 
@@ -219,15 +221,19 @@ a {
 
 
 .panels {
-    /*background-color: #fa7921; */
     background-color:var(--grey_lighter);
+    color: var(--grey_darker);
+
+    /*background-color: var(--static_motif_dark); 
+    color: var(--grey_lighter);*/
+
+
     padding: 5vh 15vh 5vh 15vh;
     /*border-radius: 10px;
     border-style: solid;
     border-color: black;*/
     /*border: 1vh solid rgb(40, 39, 37);*/
     border: 1vh solid hidden;
-    color: var(--grey_darker);
    /* transition: background-color 0.2s;
     transition-timing-function: linear;*/
     border: 0.1vh solid var(--box_shadow_color) ;
@@ -246,6 +252,11 @@ a {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;*/
+
+    transition: background-color 1s;
+    transition-timing-function: ease-out;
+
+
 
 
 
@@ -276,6 +287,9 @@ a {
     animation-fill-mode: forwards;
     animation-iteration-count: 1;*/
     box-shadow: 0vh 4vh 6vh -3vh var(--grey_dark);
+    background-color: var(--static_motif_dark); 
+    color: var(--grey_lighter);
+
     
 
 
@@ -310,39 +324,74 @@ a {
 }
 
 #contact-section {
-    color: var(--static_motif);
+    color: var(--grey_darker);
     display: flex;
     flex-flow: column wrap;
-    align-content: center;
+    align-content: flex-start;
     margin-top: 4vh;
+    padding-left: 12vh;
+
+    /*border: 2px solid black;*/
+
+
+    /*jump across goes here*/
+
+    animation-name: contact_form_jump_across;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: forwards;
+
+
+
+    
+    
+   
 
 
 }
 
-fieldset {
-    border: 0.2vh solid var(--static_motif);
 
-}
+
 
 form {
 
     margin: 2vh 2vh 2vh 2vh;
+    box-shadow: 0vh 2vh 6vh -2vh var(--grey_dark);
+    background-color: var(--static_motif_lighter); 
+    animation-name: contact_form_movement;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+    animation-delay: -2s;
+    
+
+
+
+
 }
 
 .user-text {
     color: black;
-    background-color: lightslategray;
+    background-color: var(--static_motif_light); /*lightslategray;*/
     padding: 0.5vh;
-    outline: none;
     width: 50vh;
-
+    outline: none;
     font-size: large;
+    border: none;
+
+
+
+
 }
 
 .user-text:focus {
-    border: 0.5vh solid var(--static_motif);
+    border: none;
 
 }
+
 
 #text-box {
     padding-bottom: 50vh;
@@ -351,7 +400,7 @@ form {
 }
 
 #text-box:focus {
-    border: 0.5vh solid var(--static_motif);
+    border: none;
 
 }
 
@@ -361,20 +410,31 @@ form {
     align-content: center;
     justify-content: center;
     gap: 0.5vh;
+
+
+
 }
 
 #message-type {
     color: black;
-    background-color: lightslategray;
+    background-color: var(--static_motif_light);
     outline: none;
+    border: none;
+
     
 
     
 }
 
+#select-heading {
+    background-color: var(--static_motif_lighter); 
+
+}
 #email_input {
     margin-top: 1vh;
     margin-bottom: 1vh;
+    box-shadow: 0vh 2vh 6vh -3vh var(--grey_dark);
+
 }
 
 option {
@@ -383,7 +443,7 @@ option {
 
 #submit-button {
     align-self: flex-end;
-    background-color: lightslategray;
+    background-color: aquamarine;
     margin-top: 2vh;
     width: 6vh;
     transition: width 0.2s;
@@ -394,7 +454,6 @@ option {
 #submit-button:hover {
     width: 50vh;
 }
-
 
 
 @keyframes slide {
@@ -452,10 +511,27 @@ option {
     to {margin-top: 5vh;}
 }
 
+@keyframes panel_orange {
+    from {background-color: var(--grey_lighter);color:var(--grey_darker) ;}
+    to {background-color: var(--static_motif_dark);color: var(--grey_lighter);}
+}
+
+@keyframes contact_form_movement {
+
+    0% {margin-right:2vh};
+    50% {margin-top:4vh;}
+    100% {margin-right:2vh;margin-top:2vh}
+}
+
+@keyframes contact_form_jump_across {
+    0% {transform: translate(25%);}
+    100% {transform: translate(0);}
+}
     
 
+
 /*have "developer" cycle thru the other color and black. That other color will be the same motif for kinetic energy throughout the site 
-(on button press, on hover, etc)
+(on button press, on hover,    etc)
 
 possible kinetic motif colors (hex)
 
