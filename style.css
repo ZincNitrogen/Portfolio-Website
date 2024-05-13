@@ -327,14 +327,14 @@ a {
     color: var(--grey_darker);
     display: flex;
     flex-flow: column wrap;
-    align-content: flex-start;
+    align-content: center;
     margin-top: 4vh;
-    padding-left: 12vh;
+    
 
-    /*border: 2px solid black;*/
+   /* border: 2px solid black;*/
 
 
-    /*jump across goes here*/
+    /*jump across goes here
 
     animation-name: contact_form_jump_across;
     animation-duration: 1s;
@@ -342,13 +342,18 @@ a {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-duration: forwards;
+   */
 
 
+}
 
-    
-    
+#contact-panels {
+    border: 2px solid black;
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-content: center;
    
-
+    
 
 }
 
@@ -372,6 +377,7 @@ form {
 
 
 }
+
 
 .user-text {
     color: black;
