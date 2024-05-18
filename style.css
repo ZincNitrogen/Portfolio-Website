@@ -462,6 +462,70 @@ option {
 }
 
 
+
+#hire-me-background {
+
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: center;
+    /*border: solid 2px blue;*/
+
+}
+
+
+#hire-me-background > ul {
+
+    font-size: 10vh;
+    color: var(--grey_light);
+    list-style: none;
+    z-index: 1;
+
+
+    
+
+    
+
+
+}
+
+#hire-me-background > ul > li {
+
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: center;
+
+}
+
+
+.hire {
+
+    opacity: 5%;
+
+}
+
+
+.me {
+
+    opacity: 5%;
+
+}
+
+
+#resume-container {
+    position: absolute;
+    border: solid 0.5px black;
+    scale: 5;
+    z-index: 3;
+    margin-left: 90vh;
+    margin-top: 90vh;
+}
+
+
+
+
+
+
+
 @keyframes slide {
     from {background-color: rgb(33, 33, 31) }
     to {/*background-color: var(--kinetic_motif_color);*/ 
