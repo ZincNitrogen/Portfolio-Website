@@ -157,6 +157,11 @@ li {
     font-weight: bolder;
 }
 
+/*#navactive {
+    text-decoration: underline var(--static_motif_darker) double 0.2vh;
+}*/
+
+
 section {
     display: flex;
     flex-flow: row wrap;
@@ -217,6 +222,7 @@ article {
 
 a {
     text-decoration: none;
+    background-color: none;
 }
 
 
@@ -287,8 +293,8 @@ a {
     animation-fill-mode: forwards;
     animation-iteration-count: 1;*/
     box-shadow: 0vh 4vh 6vh -3vh var(--grey_dark);
-    background-color: var(--static_motif_dark); 
-    color: var(--grey_lighter);
+    background-color: var(--static_motif_dark);
+    /*color: var(--grey_light);*/
 
     
 
@@ -297,6 +303,7 @@ a {
 
    
 }
+
 
 
 #statusbarcontainer {
